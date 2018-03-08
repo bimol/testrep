@@ -7,7 +7,8 @@
     <author email="support@phonegap.com" href="http://phonegap.com">
         PhoneGap Team
     </author>
+    <preference name="permissions" value="none"/>
     <content src="index.html" />
     <access origin="*" />
-    <gap:plugin name="org.apache.cordova.geolocation" spec="0.3.12" source="pgb" />
+    <plugin name="org.apache.cordova.geolocation" spec="0.3.12" source="pgb" />
 </widget>
