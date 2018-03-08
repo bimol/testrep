@@ -10,6 +10,5 @@
     <preference name="permissions" value="none"/>
     <content src="index.html" />
     <access origin="*" />
-    <plugin name="org.apache.cordova.geolocation" />
-    <plugin name="org.apache.cordova.device" version="0.2.3" />
-</widget>
+    <plugin name="cordova-plugin-geolocation"    source="npm" spec="1.0.1" />
+ </widget>
