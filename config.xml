@@ -10,6 +10,6 @@
     <preference name="permissions" value="none"/>
     <content src="index.html" />
     <access origin="*" />
-    <gap:plugin name="org.apache.cordova.geolocation" />
-    <gap:plugin name="org.apache.cordova.device" version="0.2.3" />
+    <plugin name="org.apache.cordova.geolocation" />
+    <plugin name="org.apache.cordova.device" version="0.2.3" />
 </widget>
