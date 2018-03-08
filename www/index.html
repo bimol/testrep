@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>WELCOME TO THE MOBILE WORLD</title>
+    </head>
+	<link rel="stylesheet" href="/css/style.css">
+    <body>
+        <script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" charset="utf-8">
+
+			// Wait for device API libraries to load
+			//
+			document.addEventListener("deviceready", onDeviceReady, false);
+
+			// device APIs are available
+			//
+			function onDeviceReady() {
+				navigator.geolocation.getCurrentPosition(onSuccess, onError);
+			}
+
+			// onSuccess Geolocation
+			//
+			function onSuccess(position) {
+				var element = document.getElementById('geolocation');
+				element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
+									'Longitude: '          + position.coords.longitude             + '<br />' +
+									'Altitude: '           + position.coords.altitude              + '<br />' +
+									'Accuracy: '           + position.coords.accuracy              + '<br />' +
+									'Altitude Accuracy: '  + position.coords.altitudeAccuracy      + '<br />' +
+									'Heading: '            + position.coords.heading               + '<br />' +
+									'Speed: '              + position.coords.speed                 + '<br />' +
+									'Timestamp: '          + position.timestamp                    + '<br />';
+			}
+
+			// onError Callback receives a PositionError object
+			//
+			function onError(error) {
+				alert('code: '    + error.code    + '\n' +
+					  'message: ' + error.message + '\n');
+			}
+
+    </script>
+        <h1 id="heading">MY FIRST MOBILE APP</h1>
+        <p align="center" class="link"id="visit"><a href="http://www.yahoo.com">VISIT NIC</a></p>
+		<p id="geolocation">Finding geolocation...</p>
+    </body>
+</html>
